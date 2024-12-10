@@ -1,0 +1,26 @@
+    <?php
+         
+         $sql = "SELECT * FROM `user_form`";
+         $result = mysqli_query($conn, $sql);
+         while($row = mysqli_fetch_assoc($result)){
+            $id = $row["id"];
+            $name = $row["name"];
+            $email = $row["email"];
+            $course = $row["course"];
+            $gender = $row["gender"];
+
+            echo `
+              
+               <td>$id</td>
+               <td>$name</td>
+               <td>$course</td>
+               <td>$gender</td>
+               <td>
+                  <a href=""><button>Edit</button></a>
+                  <a href=""><button>Deletef</button></a>
+               </td>
+            
+            `;
+         }
+         
+         ?>
